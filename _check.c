@@ -28,7 +28,7 @@ int _check(va_list args, char c)
 	else if (c == 'x' || c == 'X')
 		_printx(va_arg(args, unsigned int), c, &count);
 	else if (c == '%')
-		count += write(1, "%%", 1);
+		count += write(1, "%", 1);
 	else if (c == 'b')
 		_printb(va_arg(args, unsigned int), &count);
 	else if (c == 'o')
