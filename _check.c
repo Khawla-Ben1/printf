@@ -21,7 +21,7 @@ int _check(va_list args, char c)
 		count += write(1, "0x", 2);
 		_printx(va_arg(args, unsigned long), 'x', &count);
 	}
-	else if (c == 'd')
+	else if (c == 'd' || c == 'i')
 		_printd(va_arg(args, int), &count);
 	else if (c == 'u')
 		_printu(va_arg(args, unsigned int), &count);
