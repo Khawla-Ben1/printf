@@ -29,17 +29,3 @@ int	_printf(const char *format, ...)
 	va_end(ptr);
 	return (count);
 }
-
-/**
- * main - Entry point of the program
- *
- * Return: Always 0
- */
-
-int main(void)
-{
-	char str[5] = "Best";
-
-	_printf("%R\n", str);
-	return (0);
-}
