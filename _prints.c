@@ -17,5 +17,5 @@ int	_prints(char *c)
 		_putchar(c[i]);
 		i++;
 	}
-	return (i - 1);
+	return (i);
 }
