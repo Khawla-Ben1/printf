@@ -3,6 +3,7 @@
 /**
  * _print_rot_13 - prints the rot13'ed string
  * @str: The string to be printed
+ * @count: counts
  * Return: nothing
  */
 
