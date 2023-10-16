@@ -40,9 +40,6 @@ int _check(va_list args, char c)
 	else if (c == 'R')
 		_print_rot_13(va_arg(args, char *), &count);
 	else
-	{
-		_putchar('%');
-		_putchar(c);
-	}
+		count += _putchar(c);
 	return (count);
 }

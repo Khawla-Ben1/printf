@@ -33,3 +33,11 @@ int	_printf(const char *format, ...)
 	va_end(ptr);
 	return (count);
 }
+
+int main ()
+{
+	printf("%d", _printf("%%%"));
+	printf("%d", printf("%%%"));
+		// system("leaks a.out");
+
+}
