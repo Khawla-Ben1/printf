@@ -20,11 +20,10 @@ static int	ft_isprint(int c)
 
 int	count_n(char c)
 {
-	c /= 10;
-	if (c == 0)
-		return 1;
+	if (c < 16)
+		return (1);
 	else
-		return 0;
+		return (0);
 }
 
 /**
