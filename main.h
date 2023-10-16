@@ -18,6 +18,6 @@ void _printo(unsigned long c, int *count);
 int	_printss(char *c);
 void _printr(char *str, int *count);
 void	put_str(char *c);
-int _print_rot_13(char *str);
+void _print_rot_13(char *str, int *count);
 
 #endif

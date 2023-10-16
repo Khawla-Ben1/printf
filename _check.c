@@ -38,7 +38,7 @@ int _check(va_list args, char c)
 	else if (c == 'r')
 		_printr(va_arg(args, char *), &count);
 	else if (c == 'R')
-		count += _print_rot_13(va_arg(args, char *));
+		_print_rot_13(va_arg(args, char *), &count);
 	else
 	{
 		_putchar('%');

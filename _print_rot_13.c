@@ -7,7 +7,7 @@
  */
 
 
-int _print_rot_13(char *str)
+void _print_rot_13(char *str, int *count)
 {
 	int i;
 
@@ -22,7 +22,7 @@ int _print_rot_13(char *str)
 				str[i] = str[i] - 13;
 		}
 		_putchar(str[i]);
+		*count = *count + 1;
 		i++;
 	}
-	return (i);
 }
