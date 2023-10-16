@@ -9,7 +9,7 @@
  * Return: nothing
  */
 
-void	_printx(unsigned long c, char x, int *count)
+void _printx(unsigned long c, char x, int *count)
 {
 	char	*str;
 
