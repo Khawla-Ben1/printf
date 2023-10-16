@@ -16,13 +16,11 @@ void _printr(char *str, int *count)
 
 	i = -1;
 	while (str[++i])
-	{
 		*count = *count + 1;
-	}
 	i--;
 	while (i >= 0)
 	{
 		_putchar(str[i]);
-	i--;
+		i--;
 	}
 }
