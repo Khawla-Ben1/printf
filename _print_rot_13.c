@@ -10,20 +10,22 @@
 
 void _print_rot_13(char *str, int *count)
 {
-	int i;
+	int i, j;
+	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	i = 0;
-	while (str[i] != '\0')
+	for (j = 0; str[j]; j++)
 	{
-		if ((str[i] >= 'a' && str[i] < 'n') || (str[i] >= 'A' && str[i] < 'N'))
-			str[i] = str[i] + 13;
-		else if (str[i] >= 'm' && str[i] <= 'z')
+		if (str[j] < 'A' || (str[j] > 'Z' && str[j] < 'a') || str[j] > 'z')
+			_putchar(str[j]);
+		else
 		{
-			if (str[i] >= 'M' && str[i] <= 'Z')
-				str[i] = str[i] - 13;
+			for (i = 0; i <= 52; i++)
+			{
+				if (str[j] == rot13[i])
+					_putchar(ROT13[i]);
+			}
 		}
-		_putchar(str[i]);
-		*count = *count + 1;
-		i++;
 	}
+	*count += j;
 }
