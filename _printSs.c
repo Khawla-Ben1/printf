@@ -12,10 +12,27 @@ static int	ft_isprint(int c)
 }
 
 /**
+ * count_n - count
+ * @c: the char
+ * Return: 0 or 1
+ */
+
+
+int	count_n(char c)
+{
+	c /= 10;
+	if (c == 0)
+		return 1;
+	else
+		return 0;
+}
+
+/**
  * _printss - prints a string
  * @c: the string to print
  * Return: length of the string
  */
+
 
 int	_printss(char *c)
 {
@@ -30,9 +47,15 @@ int	_printss(char *c)
 	{
 		if (!ft_isprint(c[i]))
 		{
-			put_str("\\x0");
-			count += 2;
-			_printx(c[i], 'X', &count);
+			put_str("\\x");
+			count += 1;
+			if (count_n(c[i]) == 1)
+			{
+				put_str("0");
+				count += 1;
+
+			}
+			_printx(c[i], 'X' , &count);
 		}
 		else
 		{
