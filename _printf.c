@@ -26,7 +26,7 @@ int	_printf(const char *format, ...)
 			i++;
 			count += _check(ptr, format[i]);
 		}
-		else if (format[i] != '\0')
+		else if (format[i] != '\0' && format[i] != '%')
 			count += _putchar(format[i]);
 		i++;
 	}
