@@ -9,13 +9,11 @@
 int	_printf(const char *format, ...)
 {
 	va_list	ptr;
-	int i;
-	int count;
+	int i = 0;
+	int count = 0;
 
-	count = 0;
-	i = 0;
-	va_start(ptr, format);
-	if (!format)
+	va_start(args, format);
+	if (format == NULL)
 	{
 		return (-1);
 	}
@@ -24,12 +22,12 @@ int	_printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
-			count += _check(ptr, format[i]);
+			count += _check(args, format[i]);
 		}
 		else if (format[i] != '\0')
 			count += _putchar(format[i]);
 		i++;
 	}
-	va_end(ptr);
+	va_end(args);
 	return (count);
 }
